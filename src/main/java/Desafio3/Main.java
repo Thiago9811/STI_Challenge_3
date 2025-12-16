@@ -10,6 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
         /// path do arquivo.csv
+        /// PARA RECRUTADOR: MUDE O PATHING PARA SE ADEQUAR A SUA MAQUINA POIS EU PEGUEI A URL ABSOLUTA DA PASTA
         String arquivo = "C:\\Users\\Thiago\\Desktop\\Programação\\Java\\Lista de Revisão Intro a Dev Web\\Desafio_STI\\src\\main\\resources\\notas.csv";
         /// Hashmap<chave, valor>
         HashMap<Integer, Aluno> mapAlunos = new HashMap<>();
