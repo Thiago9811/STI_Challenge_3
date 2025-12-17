@@ -21,7 +21,7 @@ public class Aluno {
         double notaHora = 0;
         int totalHoras = 0;
         double cr = 0;
-        /// para cada registro(instancia de registronota) na lista (historico)
+        /// para cada registro((linha),(instancia de registronota)) na lista (historico)
         for (RegistroNota registro : historico){
             /// notahora recebe ele mesmo + a nota * carga horaria
             notaHora += registro.getNota() * registro.getCarga_horaria();

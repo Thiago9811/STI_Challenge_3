@@ -34,6 +34,7 @@ public class Main {
             int nota = Integer.parseInt(dados[3]);
             int carga_horaria = Integer.parseInt(dados[4]);
             int ano_semestre = Integer.parseInt(dados[5]);
+
             /// Instancia o registro nota usando as variaveis com os dados do csv
             RegistroNota registro = new RegistroNota(matricula, cod_disciplina, cod_curso, nota, carga_horaria, ano_semestre);
 
@@ -58,18 +59,19 @@ public class Main {
                 listaRegistroDoAluno = mapRegistrosDoAluno.get(matricula);
             }
 
-            /// adiciona o registro do aluno
+            /// adiciona o registro do aluno;
             listaRegistroDoAluno.add(registro);
 
             /// atualiza a lista do aluno
             mapRegistrosDoAluno.put(matricula, listaRegistroDoAluno);
 
-            /// Cria lista para guardar alunos por curso
+
+            /// Cria lista vazia para guardar alunos por curso
             List<Aluno> listaAlunosDoCurso = new ArrayList<>();
 
-            /// verifica se o curso ja possui lista de alunos, se sim, busca a lista
+            /// verifica se o curso ja possui lista de alunos com codigo desse curso, se sim, busca a lista
             if(mapAlunosDoCurso.containsKey(cod_curso)){
-                /// adiciona o aluno no mapping de alunos do curso linkando com o cod_curso
+                /// sobescreve a lista de alunos atual com uma lista ja existente e trabalha com a lista maior(nova)
                 listaAlunosDoCurso = mapAlunosDoCurso.get(cod_curso);
             }
 

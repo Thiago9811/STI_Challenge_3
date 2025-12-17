@@ -25,11 +25,14 @@ public class Curso {
             /// A lista recebe todos os registros pertencentes a aquele curso especifico
             /// somaCr chama calcularCr para todos os alunos registrados naquele curso e a func retorna esse numero/ tamanho da lista(numero de alunos)
             List<RegistroNota> registrosDoCurso = new ArrayList<>();
+            /// listaRegistrosDoAluno ja esta cheia; Ocorre uma verificação para ver se o codcurso atual bate com o registro
+            /// se forem iguais, registrosdocurso recebe esse registro(basicamente um filtro para pegar apenas alunos que fizeram o curso)
             for (RegistroNota registro : listaRegistrosDoAluno){
                 if(registro.getCod_curso() == this.codCurso){
                     registrosDoCurso.add(registro);
                 }
             }
+            ///
             somaCr += aluno.calcularCr(registrosDoCurso);
         }
         return somaCr/alunosDoCurso.size();
